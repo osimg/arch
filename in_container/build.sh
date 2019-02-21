@@ -6,6 +6,7 @@ cd /in_container
 create_disk 8192
 
 _echo "Bootstrapping target OS"
+pacman --noconfirm -Sy arch-install-scripts
 pacstrap /target base intel-ucode grub terminus-font kbd
 
 make_fstab
