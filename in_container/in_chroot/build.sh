@@ -1,6 +1,7 @@
 #!/bin/bash
 source /in_chroot/functions/functions.sh
 
+mkdir -p /boot/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 DISK=$(cat /in_chroot/device)
 grub-install $DISK
